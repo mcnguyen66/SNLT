@@ -1,37 +1,30 @@
 import sqlite3
 
-# Kết nối tới cơ sở dữ liệu
-conn = sqlite3.connect("example.db")
+# Kết nối tới cơ sở dữ liệu (hoặc tạo mới nếu chưa tồn tại)
+conn = sqlite3.connect("lesson5.db")
 
 # Tạo đối tượng để điều khiển cơ sở dữ liệu
 cursor = conn.cursor()
 
-# Tạo bảng tasks
+# Tạo bảng tasks với bốn trường thông tin
 cursor.execute('''
 CREATE TABLE IF NOT EXISTS tasks (
     id INTEGER PRIMARY KEY,
-    name TEXT NOT NULL
+    name TEXT NOT NULL,
+    description TEXT,
+    due_date TEXT
 )
 ''')
 
-# Chèn dữ liệu vào bảng tasks
-cursor.execute('''
-INSERT INTO tasks (name) VALUES (?)
-''', ('TEST DBBBBBB',))
-
-# Tạo bảng users
+# Tạo bảng users với bốn trường thông tin
 cursor.execute('''
 CREATE TABLE IF NOT EXISTS users (
     id INTEGER PRIMARY KEY,
     username TEXT NOT NULL,
-    email TEXT NOT NULL
+    email TEXT NOT NULL,
+    created_at TEXT
 )
 ''')
-
-# Chèn dữ liệu vào bảng users
-cursor.execute('''
-INSERT INTO users (username, email) VALUES (?, ?)
-''', ('john_doe', 'john@example.com'))
 
 # Lưu các thay đổi
 conn.commit()

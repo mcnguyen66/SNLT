@@ -5,11 +5,6 @@ Cách sử dụng các widget này trong giao diện.
 Dự án nhỏ ""Giao diện Thêm Công việc"": Tạo giao diện 
 để người dùng thêm công việc với một entry và button. Học sinh sẽ học cách tạo và sử dụng các widget cơ bản."
 '''
-
-"Chủ đề: Giới thiệu về SQLite.
-Kiến thức, khái niệm: Cài đặt và khái niệm cơ bản về cơ sở dữ liệu SQLite. Tìm hiểu về cách tạo và quản lý cơ sở dữ liệu.
-Dự án nhỏ ""Kết Nối với SQLite"": Kết nối ứng dụng Tkinter với cơ sở dữ liệu SQLite. Học sinh sẽ học cách thiết lập kết nối cơ sở dữ liệu."
-
 # Label, Button, Entry
 # Entry Button, Widget cơ bản
 
